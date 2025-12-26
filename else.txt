@@ -1,0 +1,32 @@
+git config --global user.name "Swcmb"
+git config --global user.email "3216243013@qq.com"
+
+cd ~/postgresql-17.1
+./configure --prefix=/db/uxdb 
+
+/db/uxdb/bin/initdb -D /usr/local/pgsql/data -E UTF8 --locale=en_US.utf8
+
+/db/uxdb/bin/initdb -D /db/uxdb/data -E UTF8 --locale=en_US.utf8
+
+sudo userdel -r uxdb
+
+/db/uxdb/bin/initdb -W uxdb
+/db/uxdb/bin/pg_ctl -D uxdb -l logfile start
+
+psql -U uxdb
+Select * from ux_backend_pid();
+
+pg_ctl start -D /db/uxdb -U uxdb
+
+export PATH=$PATH:/db/uxdb/bin
+export PATH=/db/uxdb/bin:$PATH
+
+pg数据库如何build源码时有--debug选项，保证带符号表）
+
+sudo yum install -y readline-devel zlib-devel libicu-devel openssl-devel pam-devel libxml2-devel libxslt-devel systemd-devel && tar -xvf postgresql-15.15.tar.gz && cd postgresql-15.15/ && ./configure --prefix=/db/uxdb --enable-debug && sudo make && sudo make install && cd contrib/pageinspect/ && sudo make && sudo make install
+
+
+根据给出的要求，修改项目中的代码
+(1)修改或新增的代码需编写注释，并以 patch 文件的形式一并提交
+(2)提交建一套设计文档(包含改动思路、改动要点，及源代码对应关系等)以及使用说明。
+(3)输出结果文件 result.txt
