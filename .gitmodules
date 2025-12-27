@@ -1,3 +1,6 @@
 [submodule "postgresql-15.15"]
 	path = postgresql-15.15
 	url = https://github.com/Swcmb/postgresql-mod
+[submodule "QFNU-DTA-Res"]
+	path = QFNU-DTA-Res
+	url = https://github.com/Swcmb/QFNU-DTA-Res.git
