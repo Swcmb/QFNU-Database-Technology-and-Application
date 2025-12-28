@@ -383,3 +383,7 @@ script --timing=time.log --flush --command=/bin/bash my_session.txt
   `--command=/bin/bash`：明确指定shell
 
 如果问题持续，建议优先使用 `screen -L`或 `asciinema`，它们对长时间会话的记录更稳定。
+
+
+
+git log --all --pretty=format:"%H %an <%ae> %ad %s" --date=iso > git.log
