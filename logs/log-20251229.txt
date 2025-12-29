@@ -1,0 +1,5 @@
+2025-12-29 23:25:36.253 +08:00 [INF] Starting requirements gathering for session  postgresql-implicit-time-fix  postgresql-implicit-time-column
+2025-12-29 23:25:36.324 +08:00 [FTL] Error executing requirements start
+System.Collections.Generic.KeyNotFoundException: Session not found: postgresql-implicit-time-fix
+   at SpecCodingMcpServer.Services.SessionManager.GetSession(String sessionId) in D:\demo\spec-coding-mcp\src\SpecCodingMcpServer\Services\SessionManager.cs:line 122
+   at SpecCodingMcpServer.Tools.RequirementsStartTool.SpecCodingRequirementsStart(String sessionId, String featureName) in D:\demo\spec-coding-mcp\src\SpecCodingMcpServer\Tools\RequirementsStartTool.cs:line 57
