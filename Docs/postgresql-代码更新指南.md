@@ -52,7 +52,6 @@ cat delete_all_feature.patch
 less delete_all_feature.patch
 ```
 
-
 ---
 
 ## 三、应用 Patch 文件
@@ -323,4 +322,3 @@ rm src/backend/parser/gram.y.rej
 # 4. 验证修改
 git diff src/backend/parser/gram.y
 ```
-
